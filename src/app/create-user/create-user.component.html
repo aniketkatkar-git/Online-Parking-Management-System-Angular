@@ -1,0 +1,134 @@
+
+<form [formGroup]="registerForm" class="container p-3 my-3 border " (ngSubmit)="onSubmit()">
+    <h2>Register for User</h2>
+    <div class="form-group">
+        <label for="id">Enter User Id</label>
+        <input type="number" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+        <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+            <div *ngIf="f.id.errors.required">Id is required</div>
+        </div>
+    </div>
+<div class="form-group">
+    <label for="userName">Enter Username</label>
+    <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+    <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+        <div *ngIf="f.userName.errors.required">Name is required</div>
+        <div *ngIf="f.userName.errors.maxlength">Name Should Not Exceed 45 Characters</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="firstname">Enter Firstname</label>
+    <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+    <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+        <div *ngIf="f.firstname.errors.required">Firstname is required</div>
+        <div *ngIf="f.firstname.errors.maxlength">Name Should Not Exceed 45 Characters</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="lastname">Enter Lastname</label>
+    <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+    <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+        <div *ngIf="f.lastname.errors.required">Lastname is required</div>
+        <div *ngIf="f.lastname.errors.maxlength">Name Should Not Exceed 45 Characters</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="email">Enter Email</label>
+    <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="contactNo">Contact Number</label>
+    <input type="number" formControlName="contactNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contactNo.errors }" />
+    <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">
+        <div *ngIf="f.contactNo.errors.required">Contact Number is required</div>
+          <div *ngIf="f.contactNo.errors.minlength">Contact Number Must Be At Least Of 10 Numbers</div>
+          <div *ngIf="f.contactNo.errors.maxlength">Contact Number Must Be At max Of 10 Numbers</div>
+          
+
+
+    </div>
+</div>
+<div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+        <div *ngIf="f.address.errors.required">Address Number is required</div>
+    </div>
+</div>
+<div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">Register</button>
+</div>
+</form>
+
+
+
+
+<!-- 
+<h3  align="center">New User Registration</h3><br/>
+<form>
+
+<table align="center">
+    <tr>
+        <th>UserId :</th>
+        <td><input type="text" [(ngModel)]="newuser.id" name="id" placeholder="Enter the userid"/></td>
+    </tr>
+    <tr>
+        <th>UserName :</th>
+        <td><input type="text" [(ngModel)]="newuser.userName" name="userName" placeholder="Enter the UserName"/></td>
+    </tr>
+    <tr>
+        <th>Password :</th>
+        <td><input type="text" [(ngModel)]="newuser.password" name="password" placeholder="Enter the Password"/></td>
+    </tr>
+    <tr>
+        <th>FirstName :</th>
+        <td><input type="text" [(ngModel)]="newuser.firstname" name="firstname" placeholder="Enter the FirstName"/></td>
+    </tr>
+    <tr>
+        <th>LastName :</th>
+        <td><input type="text" [(ngModel)]="newuser.lastname" name="lastname"placeholder="Enter the LastName"/></td>
+    </tr>
+    <tr>
+        <th>Email :</th>
+        <td><input type="text" [(ngModel)]="newuser.email" name="Email" placeholder="Enter the Email"/></td>
+    </tr>
+    <tr>
+        <th>Contact No :</th>
+        <td><input type="text" [(ngModel)]="newuser.contactNo" name="contactno" placeholder="Enter the contactNo"/></td>
+    </tr>
+    <tr>
+        <th>Address :</th>
+        <td><input type="text" [(ngModel)]="newuser.address" name="address" placeholder="Enter the Address"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td align="center"><input type="submit" (click)="nowRegister()"/></td>
+    </tr>
+</table>
+</form>
+
+
+ <div>{{message}}</div>
+<form>
+<input type="text" [(ngModel)]="newuser.id" name="id" placeholder="Enter the userid"/><br/>
+<input type="text" [(ngModel)]="newuser.userName" name="userName" placeholder="Enter the UserName"/><br/>
+<input type="text" [(ngModel)]="newuser.password" name="password" placeholder="Enter the Password"/><br/>
+<input type="text" [(ngModel)]="newuser.firstname" name="firstname" placeholder="Enter the FirstName"/><br/>
+<input type="text" [(ngModel)]="newuser.lastname" name="lastname"placeholder="Enter the LastName"/><br/>
+<input type="text" [(ngModel)]="newuser.email" name="Email" placeholder="Enter the Email"/><br/>
+<input type="text" [(ngModel)]="newuser.contactNo" name="contactno" placeholder="Enter the contactNo"/><br/>
+<input type="text" [(ngModel)]="newuser.address" name="address" placeholder="Enter the Address"/><br/>
+<input type="submit" (click)="nowRegister()"/>
+</form> --> 
+

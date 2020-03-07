@@ -1,0 +1,66 @@
+
+<h3>Welcome to Online Parking Management System</h3>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">home</a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="login">User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ownerlogin">Owner</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="manager">Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="admin">Admin</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+
+<!-- <div class="topnav" id="myTopnav" style="padding-right: 100px;">
+    <a href="#home" class="active">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">User
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="login" >LoginUser</a>
+            <a href="user" >RegisterUser</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Owner
+              <i class="fa fa-caret-down"></i>
+            </button>
+          
+            <div class="dropdown-content">
+                <a [routerLink]="['/ownerlogin']" >LoginOwner</a>
+                <a [routerLink]="['/newowner']">RegisterOwner</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Manager
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a [routerLink]="['/managerlogin']" >LoginManager</a>
+                    <a [routerLink]="['/manager']" >RegisterManager</a>
+                    
+                  </div> 
+                  <router-outlet></router-outlet>
+ </div> -->
+<router-outlet></router-outlet>

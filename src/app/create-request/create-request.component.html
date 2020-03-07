@@ -1,0 +1,47 @@
+<p>{{message}}</p>
+<h3 align="center"><b>Welcome {{ownerUsername}}</b></h3>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<form class="form-horizontal" (ngSubmit)="makeRequest()">
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="Rid">Request Id :</label>
+    <div class="col-sm-3">
+      <input type="text" required [(ngModel)]="request.Rid" name="Rid"  placeholder="Enter requestId" />     
+   </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="Oid">Owner Id :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="request.Oid" name="Oid"  placeholder="Enter owner Id"/> 
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="Rpsaddress">Parking Address :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="request.Rpsaddress" name="Rpsaddress"  placeholder="Enter parking Address"/> 
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="psCount">Total Slots :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="request.Rpscount" name="Rpscount"  placeholder="Enter available Parking slots "/> </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="status">Status :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="request.Rstatus" name="Rstatus"  placeholder="available or not"/></div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-3">
+      <button type="submit" class="btn btn-default">Make Request</button>
+    </div>
+  </div>
+</form>
+
+
+

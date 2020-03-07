@@ -1,0 +1,130 @@
+
+<h3  align="center">New Owner Registration</h3><br/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<form class="form-horizontal" (ngSubmit)="nowRegister()">
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="oid">Owner Id :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.id" name="id" placeholder="Enter the ownerid"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="username">Owner UserName :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.ownerUsername" name="ownerUsername" placeholder="Enter the OwnerName"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="pwd">Password :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.password" name="password" placeholder="Enter the Password"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="firstName">firstName :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.firstName" name="firstName" placeholder="Enter the FirstName"/>
+     </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="lastname">lastName :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.lastName" name="lastName"placeholder="Enter the LastName"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="email">Email :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.email" name="email" placeholder="eg. abc@gmail.com"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mob">Contact NO :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.contactno" name="contactno" placeholder="Enter the contactNo"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mob">Address:</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newowner.address" name="address" placeholder="Enter the address"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-2">
+      <button type="submit" class="btn btn-default">Click here</button>
+    </div>
+  </div>
+</form>
+
+
+<!-- <form>
+<input type="text" [(ngModel)]="newowner.id" name="id" placeholder="Enter the ownerid"/><br/>
+<input type="text" [(ngModel)]="newowner.ownerUsername" name="ownerUsername" placeholder="Enter the OwnerName"/><br/>
+<input type="text" [(ngModel)]="newowner.password" name="password" placeholder="Enter the Password"/><br/>
+<input type="text" [(ngModel)]="newowner.firstName" name="firstName" placeholder="Enter the FirstName"/><br/>
+<input type="text" [(ngModel)]="newowner.lastName" name="lastName"placeholder="Enter the LastName"/><br/>
+<input type="text" [(ngModel)]="newowner.email" name="email" placeholder="Enter the Email"/><br/>
+<input type="text" [(ngModel)]="newowner.contactno" name="contactno" placeholder="Enter the contactNo"/><br/>
+<input type="text" [(ngModel)]="newowner.contactno" name="contactno" placeholder="Enter the contactNo"/><br/>
+<input type="submit" (click)="nowRegister()"/>
+</form> -->
+
+
+
+<!-- <table style="padding-top: 100px;">
+   
+    <tr>
+        <th>Id :</th>
+        <td><input type="text" [(ngModel)]="newowner.id" name="id" placeholder="Enter the ownerid"/></td>  
+    </tr>
+    <tr>
+        <th>UserName :</th>
+        <td><input type="text" [(ngModel)]="newowner.ownerUsername" name="ownerUsername" placeholder="Enter the OwnerName"/></td>
+    </tr>
+    <tr>
+        <th>Password</th>
+        <td><input type="text" [(ngModel)]="newowner.password" name="password" placeholder="Enter the Password"/></td>
+    </tr>
+    <tr>
+        <th>FirstName :</th>
+        <td><input type="text" [(ngModel)]="newowner.firstName" name="firstName" placeholder="Enter the FirstName"/></td>
+    </tr>
+    <tr>
+        <th>LastName :</th>
+        <td><input type="text" [(ngModel)]="newowner.lastName" name="lastName"placeholder="Enter the LastName"/></td>
+    </tr>
+    <tr>
+        <th>Email :</th>
+        <td><input type="text" [(ngModel)]="newowner.email" name="email" placeholder="Enter the Email"/> </td>
+    </tr>
+    <tr>
+        <th>Contact No :</th>
+        <td><input type="text" [(ngModel)]="newowner.contactno" name="contactno" placeholder="Enter the contactNo"/></td>
+    </tr>
+    <tr>
+        <th>Address :</th>
+        <td><input type="text" [(ngModel)]="newowner.address" name="address" placeholder="Enter the address"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td align="center"><input type="submit" (click)="nowRegister()"/></td>
+    </tr>
+
+</table>
+ -->
+
+
+
+
+
+
+
+
+

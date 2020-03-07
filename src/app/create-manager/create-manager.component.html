@@ -1,0 +1,57 @@
+<h3 align="center">New Manager Registration</h3>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<form class="form-horizontal" (ngSubmit)="nowRegister()">
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mId">Manager Id :</label>
+    <div class="col-sm-3">
+        <input type="text" [(ngModel)]="newmanager.mId" name="id" placeholder="Enter the managerid"/>
+   </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mUserName">UserName :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="newmanager.mUserName" name="mUserName"  placeholder="Enter mUserName"/> 
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mPassword">Password :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="newmanager.mPassword" name="mPassword"  placeholder="Enter Password"/> 
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mEmail">Email :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="newmanager.mEmail" name="mEmail"  placeholder="xyz@gmail.com"/> </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="mContactNo">Contact No :</label>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="newmanager.mContactNo" name="mContactNo"  placeholder="available or not"/></div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-2">
+      <button type="submit" class="btn btn-default">Register</button>
+    </div>
+  </div>
+</form>
+
+
+<!-- <h3>New Manager Registration</h3>
+<div>{{message}}</div>
+<form>
+<input type="text" [(ngModel)]="newmanager.mId" name="id" placeholder="Enter the managerid"/><br/>
+<input type="text" [(ngModel)]="newmanager.mName" name="name" placeholder="Enter the ManagerName"/><br/>
+<input type="text" [(ngModel)]="newmanager.mEmail" name="email" placeholder="Enter the ManagerEmail"/><br/>
+<input type="text" [(ngModel)]="newmanager.mContactNo" name="contactno" placeholder="Enter the contctNo"/><br/>
+<input type="submit" (click)="nowRegister()"/>
+</form> -->
+
+
+

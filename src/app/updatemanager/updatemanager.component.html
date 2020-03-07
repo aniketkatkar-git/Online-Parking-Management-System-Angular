@@ -1,0 +1,11 @@
+<p>updatemanager</p>
+<div>{{message}}</div>
+<form>
+
+    <input type="number" [(ngModel)]="newmanager.mId" name="id" placeholder="Enter the id"/><br/>
+    <input type="text" [(ngModel)]="newmanager.mName" name="username" placeholder="Enter the name"/><br/>
+    <input type="email" [(ngModel)]="newmanager.mEmail" name="password" placeholder="Enter the email"/><br/>
+    <input type="number" [(ngModel)]="newmanager.mContactNo" name="firstname" placeholder="Enter the ContactNo"/><br/>
+    <input type="submit" (click)="nowUpdate()"/>
+ 
+</form>

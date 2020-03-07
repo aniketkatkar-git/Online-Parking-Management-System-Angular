@@ -1,0 +1,60 @@
+<h4 align="center"><b>Owner Login</b></h4>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+ <form class="form-horizontal" (ngSubmit)="checkValidation()">
+   <div class="form-group">
+     <label class="control-label col-sm-5" for="username">UserName :</label>
+     <div class="col-sm-3">
+        <input type="text" required [(ngModel)]="ownerUsername" name="ownerUsername"  placeholder="OwnerName" />     
+</div>
+   </div>
+   <div class="form-group">
+     <label class="control-label col-sm-5" for="pwd">Password:</label>
+     <div class="col-sm-3">
+        <input type="password" [(ngModel)]="password" name="password"  placeholder="Password"/>   
+     </div>
+   </div>
+   <div class="form-group">
+     <div class="col-sm-offset-5 col-sm-4">
+       <div class="checkbox">
+         <label><input type="checkbox"> Remember me</label>
+       </div>
+     </div>
+   </div>
+   <div class="form-group">
+     <div class="col-sm-offset-6 col-sm-2">
+       <button type="submit" class="btn btn-default">Login</button>
+     </div>
+   </div>
+   <div class="form-group">
+    <div class="col-sm-offset-6 col-sm-4">
+     <a [routerLink]="['/newowner']">New Owner Registration?</a>
+    </div>
+  </div>
+ </form>
+
+<!-- <p>Owner Login!</p>
+<p>{{msg}}</p>
+<form (ngSubmit)="checkValidation()">
+
+    
+<div class="login">
+<input type="text" required [(ngModel)]="ownerUsername" name="ownerUsername"  placeholder="OwnerName" />
+<br/>
+
+
+<input type="password" [(ngModel)]="password" name="password"  placeholder="Password"/>
+<br/>
+<div class="container" style="background-color:#f1f1f1">
+<button type="submit">LogIn</button>
+</div>
+
+<span class="psw"> 
+    <a routerLink="/user" class="forget">New OwnerRegister</a></span>
+</div>
+
+</form> -->

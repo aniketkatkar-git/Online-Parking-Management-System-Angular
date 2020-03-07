@@ -1,0 +1,123 @@
+<!-- 
+<div>{{message}}</div>
+<h3>Welcome {{username}}</h3>
+<form>
+    City: 
+    <select (change)="getAllArea($event)">
+         <option *ngFor="let key of city" [value]="key.cid" >{{key.cname}}</option>
+    </select>
+       <br/>
+       Area:
+     <select>
+         <option *ngFor="let area of Area">{{area.Aname}}</option>
+     </select>
+     <br/>
+     ParkingLocation:
+     <select>
+         <option ng-repeat="book in booking">{{book.Plname}}</option>
+     </select>
+     <br/>
+     TimeSlot:
+     <select>
+         <option ng-repeat="book in booking">{{book.Tsslots}}</option>
+     </select>
+     <br/>
+     ParkingSlot:
+     <select>
+         <option ng-repeat="book in booking">{{book.Plname}}</option>
+     </select>
+     <br/>
+    Charges: <input type="text" [(ngModel)]="book.Bcharges" name="Bcharges"/><br/>
+     Mode:<input type="text" [(ngModel)]="book.Bmode" name="Bmode"/><br/>
+     Booking Status:<input type="text"  [(ngModel)]="book.Bpaymentstatus" name="Bpaymentstatus"/><br/>
+     <input type="submit" (click)="nowRegisterBooking()"/>
+ </form> 
+ <div>
+     <button type="Submit" (click)="LogOut()">Logout</button> 
+ </div>  -->
+
+
+ 
+
+ <h3  align="center">Book Parking slot</h3><br/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+ <div><b>{{message}}</b></div>
+ <h3  align="center"><b>Welcome {{username}}</b></h3>
+ <form class="form-horizontal">
+ 
+   <div class="form-group">
+     <label class="control-label col-sm-4">City :</label>
+     <div class="col-sm-3">
+        <select (change)="getAllArea($event)">
+            <option *ngFor="let key of city" [value]="key.cid" >{{key.cname}}</option>
+       </select>
+</div>
+   </div>
+
+   <div class="form-group">
+     <label class="control-label col-sm-4">Area:</label>
+     <div class="col-sm-3">
+        <select>
+            <option *ngFor="let area of Area">{{area.Aname}}</option>
+        </select>
+     </div>
+   </div>
+   <div class="form-group">
+    <label class="control-label col-sm-4">Parking Location :</label>
+    <div class="col-sm-3">
+        <select>
+            <option ng-repeat="book in booking">{{book.Plname}}</option>
+        </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-4">TimeSlots :</label>
+    <div class="col-sm-3">
+        <select>
+            <option ng-repeat="book in booking">{{book.Tsslots}}</option>
+        </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-4">Parking Slots :</label>
+    <div class="col-sm-3">     
+        <select>
+            <option ng-repeat="book in booking">{{book.Plname}}</option>
+        </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4">Charges :</label>
+    <div class="col-sm-2">     
+        <input type="text" [(ngModel)]="book.Bcharges" name="Bcharges"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4">Booking Status :</label>
+    <div class="col-sm-2">     
+        <input type="text"  [(ngModel)]="book.Bpaymentstatus" name="Bpaymentstatus"/>
+    </div>
+  </div>
+
+   <div class="form-group">
+     <div class="col-sm-offset-4 col-sm-2">
+        <button type="submit" (click)="nowRegisterBooking()">Submit</button>  
+     </div>
+   </div>
+   
+   <div>
+    <div class="col-sm-offset-4 col-sm-2">
+        <button type="Submit" (click)="LogOut()">Logout</button> 
+    </div>
+  </div>
+  <a [routerLink]="['/updateuser']">Update Info?</a>
+
+ </form>
+
+
